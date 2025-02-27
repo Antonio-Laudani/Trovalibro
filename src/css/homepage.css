@@ -1,0 +1,127 @@
+@media (min-width: 601px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #2E4057;
+    }
+    
+    /*LIBRO*/
+    a {
+        display: block; /* Assicurati che il link si comporti come un blocco */
+        text-decoration: none; /* Rimuovi eventuali sottolineature */
+      }
+    
+    
+    .book{
+        cursor: pointer;
+        position: center;
+        display: flex;
+        width: 350px;
+        height: 450px;
+        padding: 20px;
+        perspective: 1000px;
+        margin-top: 25vh;
+        box-shadow: 
+        10px 10px 20px rgba(0, 0, 0, 0.7), /* Ombra generale */
+        15px 20px 30px rgba(0, 0, 0, 0.5), /* Intensità maggiore destra */
+        0px 25px 35px rgba(0, 0, 0, 0.6); /* Intensità maggiore sotto */
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease-in-out; /* Transizione ombra */
+        transition: transform 0.3s ease; /* Aggiungi una transizione per l'ingrandimento */
+        background-color: #6e0f0e;
+    }
+    .book:hover {
+        box-shadow: 
+          10px 10px 25px rgba(0, 0, 0, 0.9),  /* Ombra generale più intensa */
+          15px 25px 40px rgba(0, 0, 0, 0.8),  /* Ombra destra più marcata */
+          0px 30px 50px rgba(0, 0, 0, 0.7);  /* Ombra sotto più marcata */
+          transform: scale(1.05); /* Ingrandisce leggermente il libro quando ci si passa sopra */
+      }
+    .cover{
+        width: 100%;
+        height: 100%;
+        background-color:#6e0f0e ;
+        border-radius: 10px;
+        border: 5px solid #b89e14;
+    }
+    .title{
+        text-align: center;
+        margin-top: 10px;
+        font-family: 'Dancing Script', cursive;
+        font-style: italic;
+        color: #ecd453;  
+    }
+    .author{
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 100%;
+        font-family: 'Dancing Script', cursive;
+        font-style: italic;  
+        color: #ecd453;
+    }
+    
+    
+    
+    .background {
+            display: none; /* Nasconde lo sfondo su dispositivi più grandi */
+        }
+    
+    }
+
+    /*PERGAMENA MOBILE*/
+    @media (max-width: 600px) {
+    .book{
+        display: none;
+    }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #2E4057;
+        }
+        
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            /* z-index: 1; Fondo sopra altri elementi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Imposta la disposizione in colonna */
+            text-align: center; /* Centra il testo */
+        }
+        
+        .background a {
+            display: block; /* Rende il link un blocco */
+        }
+        
+        .background img {
+            width: 50vw;
+            height: 30vh;
+            object-fit: contain;
+        }
+        
+        h3 {
+            margin-top: 20px; /* Distanza tra l'immagine e il testo */
+            font-size: 1.5rem; /* Regola la dimensione del font */
+            color: #000; /* Colore del testo */
+            font-weight: bold;
+            font-family: 'Dancing Script', cursive;
+        }
+    }

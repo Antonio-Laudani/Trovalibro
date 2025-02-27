@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -21,6 +22,9 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
+        generator: {
+            filename: 'img/[name][ext][query]', // Salva le immagini nella cartella img
+          },
       },
     ],
   },
@@ -40,6 +44,11 @@ module.exports = {
       filename: 'indexMobile.html',
       chunks: ['indexMobile'],
     }),
+    new CopyWebpackPlugin({
+        patterns: [
+          { from: 'src/img', to: 'img' }, // Copia la cartella img da src a dist
+        ],
+      }),
   ],
   devServer: {
     static: './dist',
