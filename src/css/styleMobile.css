@@ -1,0 +1,259 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Imposta altezza per il corretto posizionamento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Colore di sfondo */
+}
+
+/* Contenitore dell'immagine */
+.img {
+    width: 95vw;  /* 80% della larghezza della finestra */
+    height: 100vh; /* 80% dell'altezza della finestra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Nasconde l'overflow */
+    position: relative; /* Necessario per l'overflow */
+}
+
+/* Stile per l'immagine */
+.img img {
+    max-width: 100%;  /* L'immagine non supererà mai la larghezza del contenitore */
+    max-height: 100%; /* L'immagine non supererà mai l'altezza del contenitore */
+    object-fit: contain; /* Non taglia l'immagine, ma la adatta al contenitore */
+    object-position: center; /* L'immagine si posiziona al centro */
+   /* filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));  Ombra morbida */
+   filter: drop-shadow(5px 4px 0px rgba(0, 0, 0, 0.2)); /* Ombra morbida */
+}
+
+
+/* Navbar sopra la pergamena */
+.navbar {
+position: absolute;
+top: 2%;  /* Posizione sopra la pergamena, distanzia un po' dalla parte superiore */
+left: 50%;
+transform: translateX(-50%);
+/* border: black 1px solid; */
+padding: 5% 15%;
+border-radius: 5px;
+font-size: 18px;
+z-index: 1;
+width: 80%; /* Imposta una larghezza per la navbar */
+}
+
+/* Modifiche alla barra di ricerca */
+.navbar .d-flex {
+flex-direction: column;
+align-items: center;
+}
+
+.navbar .form-control {
+width: 200px; /* Larghezza della barra di ricerca */
+height: 35px; /* Altezza maggiore della barra di ricerca */
+padding: 10px;
+margin-bottom: 12px; /* Distanza tra la barra di ricerca e il testo */
+background-color: #f8e5cd;
+filter: drop-shadow(4px 3px 0px rgba(0, 0, 0, 0.2));
+}
+
+
+.navbar .btn {
+border: none;
+/*border-color: black;*/
+width: 30px; /* Stessa larghezza e altezza per renderlo perfettamente rotondo */
+height: 30px;
+border-radius: 50%; /* Rende il bottone circolare */
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px; /* Dimensione del testo */
+padding: 0; /* Rimuove il padding extra */
+display: block;
+}
+
+.navbar .btn img {
+width: 60%; /* Adatta la dimensione dell'icona */
+height: auto;
+filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4)); /* Ombra */
+}
+/* Immagine nel bottone con background sfumato */
+.navbar .btn img:focus,
+.navbar .btn img:active {
+filter: drop-shadow(4px 4px 0px rgba(110, 15, 15, 0.8)); /* Ombra */
+}
+
+/* Navbar: aggiungi l'effetto focus sul link di ricerca (se ci sono ulteriori link) */
+.navbar .d-flex .form-control:focus {
+box-shadow: 0 0 8px rgba(110, 15, 14, 0.8) !important;
+border-color: #6e0f0e !important;
+}
+
+
+/*FOOTER*/
+.footer {
+    width: 100%;
+/*width: 70%;  Larghezza piena per allinearlo alla pergamena */
+display: flex;
+justify-content: center;
+position: absolute; /* Posiziona sotto la pergamena */
+bottom: 2vh; /* Lo ancora in basso */
+}
+
+.footer img {
+
+object-fit: contain;
+width: 75%; /* Adatta la bottiglia alla pergamena */
+height: auto; /* Mantiene proporzioni */
+object-fit: contain; /* Evita distorsioni */
+padding-left: 2vh;
+filter: drop-shadow(3px 5px 0px rgba(0, 0, 0, 0.2)); /* Ombra */
+}
+/* Social icons */
+.social {
+    position: absolute; /* Posizionamento assoluto per le icone all'interno della bottiglia */
+    top: 30%; /* Posiziona le icone all'interno della bottiglia */
+    left: 25%;
+    /* transform: translateX(-48%); Centra orizzontalmente */
+    display: flex; /* Dispone le icone una accanto all'altra */
+     gap:20% ; /*Spazio flessibile tra le icone */
+    z-index: 2; /* Assicura che le icone siano sopra la bottiglia */
+}
+
+.social img {
+    width: 45px; /* Dimensione delle icone */
+    height: 45px; /* Mantiene la proporzione */
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.2)); /* Ombra morbida */ 
+}
+.social img:focus,
+.social img:active {
+    width: 45px; /* Dimensione delle icone */
+    height: 45px; /* Mantiene la proporzione */
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.4)); /* Ombra morbida */ 
+}
+
+/*CAROUSEL*/
+.carousel {
+position: absolute;
+top: 46%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 55%;
+max-width: 300px;
+height: 22%;
+border: #6e0f0e 3px solid;
+border-radius: 10px;
+}
+
+.carousel-item img {
+margin-top: 3%;
+max-width: 30%;    /* L'immagine non supererà l'80% della larghezza del contenitore */
+max-height: 250px; /* Limita l'altezza dell'immagine a 250px */
+width: auto;       /* Mantiene la proporzione orizzontale */
+height: auto;      /* Mantiene la proporzione verticale */
+object-fit: contain; /* L'immagine si adatta senza essere tagliata */
+margin-left: 5%;
+display: block;    /* Assicura che l'immagine venga trattata come un blocco */
+}
+.carousel-caption {
+position: absolute;
+top: 0px;
+z-index: 0;
+padding-left: 35px;
+font-size: small;
+}
+.carousel-caption h6,
+.carousel-caption p{
+padding-left: 20%;
+}
+.carousel-inner{
+background-color: #6e0f0e;
+height: 90%;
+overflow-y: auto;
+}
+.carousel-control-prev, .carousel-control-next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 1; /* Mette le frecce sopra gli altri contenuti */
+}
+
+.carousel-control-prev {
+left: 20%;
+}
+
+.carousel-control-next {
+right: 20%;
+}
+.standardcover img{
+filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8)); /* Ombra morbida */   
+}
+.innerbtn{
+background-color: #f8e5cd;
+border-radius: 10px;
+filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4)); /* Ombra */
+margin-left: 20%;
+}
+
+
+.modal {
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal-content {
+background:#f8e5cd;
+padding: 20px;
+border-radius: 8px;
+height: 50%;
+width: 80%;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+position: relative;
+overflow-y: auto;
+overflow-x: hidden;
+}
+
+.close-button {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+text-align: center;
+border: #6e0f0e 1px solid ;
+background-color: #6e0f0e;
+color: #f8e5cd;
+font: bold;
+position: absolute;
+top: 10px;
+right: 15px;
+cursor: pointer;
+font-size: 18px;
+}
+.close-button:active,
+.close-button:hover{
+filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4)); /* Ombra */  
+}
+.no-results {
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+color:#f8e5cd;
+padding: 20px;
+}
+.spinner-border {
+position: fixed; /* Posizione fissa rispetto alla finestra */
+top: 20%; /* Distanza dalla parte superiore della finestra (puoi cambiare questo valore in base all'altezza della navbar) */
+left: 47%;
+/* transform: translateX(-50%); Centra orizzontalmente blocca l animazione*/
+z-index: 9999; /* Forza a stare sopra altri contenuti */
+color: #6e0f0e;
+}
