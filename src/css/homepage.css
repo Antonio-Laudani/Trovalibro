@@ -67,9 +67,8 @@
     }
     
     
-    
     .background {
-            display: none; /* Nasconde lo sfondo su dispositivi più grandi */
+            display: none; /* Nasconde la pergamena su dispositivi più grandi */
         }
     
     }
@@ -99,7 +98,6 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            /* z-index: 1; Fondo sopra altri elementi */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -120,7 +118,7 @@
         h3 {
             margin-top: 20px; /* Distanza tra l'immagine e il testo */
             font-size: 1.5rem; /* Regola la dimensione del font */
-            color: #000; /* Colore del testo */
+            color:#f8e5cd; /* Colore del testo */
             font-weight: bold;
             font-family: 'Dancing Script', cursive;
         }
