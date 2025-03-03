@@ -1,12 +1,11 @@
 import '../css/styleMobile.css' ;
-console.log("il file è stato eseguito");
 
+//DESCRIZIONE
 async function fetchDescription(key) {
     try {
       const response = await fetch(`https://openlibrary.org${key}.json`);
       const data = await response.json();
   
-      //console.log("API Response:", data);  Debug
       let title = "Unknown Title";
       if (data.title) {
         title = data.title;
@@ -66,16 +65,12 @@ async function fetchDescription(key) {
   // Rende la funzione accessibile globalmente
 window.fetchDescription = fetchDescription;
   
-  
-  
-  
-  
-  
+
   document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector(".form-control");
     const searchButton = document.querySelector(".btn");
     const carousel = document.querySelector(".carousel-inner");
-    const indicatorsContainer = document.querySelector(".carousel-indicators"); // <- AGGIUNTO
+    const indicatorsContainer = document.querySelector(".carousel-indicators");
     const carouselContainer = document.querySelector(".carousel");
     const prevButton = document.querySelector(".carousel-control-prev");
     const nextButton = document.querySelector(".carousel-control-next");
@@ -106,8 +101,7 @@ window.fetchDescription = fetchDescription;
         
         loader.style.display = "block"; // Mostra il loader prima della richiesta
         let url = `https://openlibrary.org/search.json?q=${query}`;
-        /**Simula un ritardo di 5 secondi prima della richiesta API
-      await new Promise(resolve => setTimeout(resolve, 5000));**/
+        
         const response = await fetch(url);
         const data = await response.json();
   
