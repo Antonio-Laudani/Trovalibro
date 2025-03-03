@@ -11,6 +11,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',  // Assicurati che punti alla root della cartella dist
     clean: true,
   },
   module: {
@@ -53,6 +54,10 @@ module.exports = {
   devServer: {
     static: './dist',
     open: true,
+    historyApiFallback: true, // Per gestire il fallback alle pagine HTML
+    client: {
+      logging: 'info',
+    },
   },
   mode: 'development',
 };
