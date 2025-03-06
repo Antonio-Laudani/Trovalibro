@@ -251,3 +251,23 @@ left: 47%;
 z-index: 9999;
 color: #6e0f0e;
 }
+
+.rotatepage{
+    display: none;
+}
+
+
+@media (min-width: 601px){
+    html, body{
+       background-color: white;
+     }
+     .navbar,
+     .img,
+     .carousel,
+     .footer{
+         display: none;
+     }
+     .rotatepage{
+         display: flex;
+     }
+ }
