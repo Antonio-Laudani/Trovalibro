@@ -160,12 +160,15 @@ window.fetchDescription = fetchDescription;
     }
   
     // Funzione di ricerca (case-insensitive)
-    searchButton.addEventListener("click", function () {
-      const query = searchInput.value.trim().toLowerCase();
-      if (query) {
-        fetchBooks(query);
-      }
-    });
+  const searchForm = document.querySelector("form"); // Aggiunto per ottenere il form
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Impedisce il comportamento predefinito (ricaricamento della pagina)
+    const query = searchInput.value.trim().toLowerCase();
+    if (query) {
+      fetchBooks(query);
+    }
+  });
+
   
     // Gestione della navigazione del carosello (freccia precedente)
     prevButton.addEventListener("click", function () {
