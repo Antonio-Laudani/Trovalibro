@@ -97,8 +97,6 @@ window.fetchDescription = fetchDescription;
     // Funzione per ottenere i libri dalla ricerca
     async function fetchBooks(query) {
       try {
-        //console.log("pippo");//
-        
         loader.style.display = "block"; // Mostra il loader prima della richiesta
         let url = `https://openlibrary.org/search.json?q=${query}`;
         
