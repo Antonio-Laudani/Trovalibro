@@ -271,7 +271,7 @@ color: #6e0f0e;
     }
 
     .navbar {
-        width: 50%;
+        width: 45%;
         padding: 0 16%; 
         transform: translateX(-50%);
     }
@@ -309,7 +309,7 @@ color: #6e0f0e;
     }
 
     .footer{
-        width: 27%;
+        width: 25%;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
