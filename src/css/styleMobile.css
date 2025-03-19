@@ -251,17 +251,12 @@ z-index: 9999;
 color: #6e0f0e;
 }
 
-.rotatepage{
-    display: none;
-}
 
 
 @media (max-height: 600px) and (orientation: landscape){
-    .rotatepage{
-        display: none;
-    }
    html, body{
       background-color: #ffff;
+      overflow: hidden;
     }
 
     .img,
