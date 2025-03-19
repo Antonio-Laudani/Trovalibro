@@ -309,7 +309,7 @@ color: #6e0f0e;
     }
 
     .footer{
-        width: 30%;
+        width: 27%;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -350,20 +350,3 @@ color: #6e0f0e;
         font-size: 7px;
     }
 }
-
-/*
-@media (min-width: 601px){
-    html, body{
-       background-color: white;
-     }
-     .navbar,
-     .img,
-     .carousel,
-     .footer{
-         display: none;
-     }
-     .rotatepage{
-         display: flex;
-     }
- }
-     */

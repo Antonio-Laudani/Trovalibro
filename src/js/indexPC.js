@@ -73,18 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentBooks = []; // Array per memorizzare i libri trovati
     let currentBookIndex = 0; // Indice del libro attuale
-  
-    /* Creazione del loader
-    const loader = document.createElement("div");
-    loader.innerHTML = `<div class="spinner-border text" role="status"></div>`;
-    loader.style.display = "none"; // Inizialmente nascosto
-    /*loader.style.textAlign = "center";
-    loader.style.margin = "10px auto"; // Per centrarlo
-    loader.style.width = "50px"; 
-    loader.style.height = "50px"; */
-//aggiungi il loader
-   // document.body.appendChild(loader); 
-  
+   
     // Funzione per ottenere i libri dalla ricerca
     async function fetchBooks(query) {
       try {
