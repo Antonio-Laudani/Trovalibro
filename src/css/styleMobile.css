@@ -272,7 +272,7 @@ color: #6e0f0e;
 
     .navbar {
         width: 45%;
-        padding: 0 16%; 
+        padding: 0 14%; 
         transform: translateX(-50%);
     }
 
@@ -322,12 +322,13 @@ color: #6e0f0e;
         display: flex;
     justify-content: center;
     align-items: center;
-    top: 3vh;
-    gap: clamp(1vw, 1.5vw, 2vw);
+    top: 1.5vh;
+    right: 30%;
+    gap: clamp(1vw, 1.5vw, 1vw);
 
     } 
     .social img {
-        width: 25px;
+        width: 23px;
         
     }
     .social img:focus,
