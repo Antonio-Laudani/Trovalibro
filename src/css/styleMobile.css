@@ -299,7 +299,7 @@ color: #6e0f0e;
 
     .img{
         margin-top: -5%;
-    width: 45%;
+    width: 43%;
     flex-grow: 0;
     }
 
@@ -343,7 +343,7 @@ color: #6e0f0e;
     }
     
     .innerbtn{
-        width: 80px;
+        width: 70px;
         height: 30px;
         margin-left: -62%;
         margin-bottom: 25px;
