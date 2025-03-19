@@ -282,7 +282,7 @@ color:#D7D9D1 ;
   }
   .footer img:hover {
     animation: bounce 0.6s ease 3;
-    cursor: url('/src/img/cursore.png');
+    cursor: url('../img/cursore.png');
   }
   
   @keyframes bounce {
