@@ -19,7 +19,6 @@
     
     
     .book{
-        cursor:url('img/cursore.png'), auto ;
         position: center;
         display: flex;
         width: 350px;
